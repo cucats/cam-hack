@@ -3,12 +3,12 @@
 ## Running a development server
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 ## Building a production versoin
 
 ```bash
-npm run build
+pnpm run build
 ```
