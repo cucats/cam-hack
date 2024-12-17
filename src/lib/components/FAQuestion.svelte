@@ -1,7 +1,15 @@
 <script>
     import { slide } from "svelte/transition";
+    /**
+     * @typedef {Object} Props
+     * @property {import('svelte').Snippet} [question]
+     * @property {import('svelte').Snippet} [children]
+     */
 
-    let isExpanded = false;
+    /** @type {Props} */
+    let { question, children } = $props();
+
+    let isExpanded = $state(false);
 
     function toggle() {
         isExpanded = !isExpanded;
@@ -9,13 +17,13 @@
 </script>
 
 <div class="mb-4">
-    <button class="mb-2 font-bold cursor-pointer" on:click={toggle}>
-        <slot name="question" />
+    <button class="mb-2 font-bold cursor-pointer" onclick={toggle}>
+        {@render question()}
         <i class="chevron" class:up={isExpanded}></i>
     </button>
     {#if isExpanded}
         <div class="mb-2" transition:slide>
-            <slot />
+            {@render children()}
         </div>
     {/if}
 </div>

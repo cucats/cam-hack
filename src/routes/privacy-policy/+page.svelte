@@ -11,14 +11,11 @@
             </em>
         </p>
         <p>
-            This Privacy Policy explains how Cam Hack collects and uses your
-            personal information when you participate in our hackathon.
+            This Privacy Policy explains how Cam Hack collects and uses your personal information
+            when you participate in our hackathon.
         </p>
         <h3>1. Information we collect</h3>
-        <p>
-            We collect personal information you provide during registration,
-            such as:
-        </p>
+        <p>We collect personal information you provide during registration, such as:</p>
         <ul class="pl-8 list-disc">
             <li>Name</li>
             <li>Email address</li>
@@ -26,8 +23,8 @@
             <li>Dietary requirements</li>
         </ul>
         <p>
-            We may also take photographs of consenting participants during the event, but
-            we will accommodate for those who opt out of this.
+            We may also take photographs of consenting participants during the event, but we will
+            accommodate for those who opt out of this.
         </p>
         <h3>2. How we use your information</h3>
         <p>Your information is used for:</p>
@@ -40,10 +37,7 @@
         <h3>3. Sharing your information</h3>
         <p>We may share your information with:</p>
         <ul class="pl-8 list-disc">
-            <li>
-                With participant's consent, event partners and sponsors for
-                networking purposes
-            </li>
+            <li>With participant's consent, event partners and sponsors for networking purposes</li>
             <li>Service providers assisting with the event</li>
             <li>As required by law</li>
         </ul>

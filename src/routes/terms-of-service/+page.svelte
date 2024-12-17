@@ -12,8 +12,8 @@
         </p>
         <h3>1. Acceptance of Terms</h3>
         <p>
-            By registering for and participating in this event, you acknowledge
-            that you have read and understood these Terms and agree to them.
+            By registering for and participating in this event, you acknowledge that you have read
+            and understood these Terms and agree to them.
         </p>
         <h3>2. Code of Conduct</h3>
         <p>
@@ -24,9 +24,8 @@
         </p>
         <h3>3. Submissions</h3>
         <p>
-            By submitting your code and project, you grant Cam Hack a
-            non-exclusive, royalty-free license to use, reproduce, modify, and
-            publicly display your submission for:
+            By submitting your code and project, you grant Cam Hack a non-exclusive, royalty-free
+            license to use, reproduce, modify, and publicly display your submission for:
         </p>
         <ul class="pl-8 list-disc">
             <li>Judging and evaluation purposes</li>
@@ -34,13 +33,13 @@
         </ul>
         <h3>4. Intellectual property</h3>
         <p>
-            You retain ownership to your submission and may use it as you wish,
-            including licensing or commercializing it after the hackathon.
+            You retain ownership to your submission and may use it as you wish, including licensing
+            or commercializing it after the hackathon.
         </p>
         <h3>5. Limitation of liability</h3>
         <p>
-            The organizers are not liable for any damages or losses incurred
-            during your participation in the Event.
+            The organizers are not liable for any damages or losses incurred during your
+            participation in the Event.
         </p>
     </div>
 </section>

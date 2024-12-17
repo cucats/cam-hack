@@ -2,18 +2,14 @@
     import Hamburger from "$lib/components/Hamburger.svelte";
     import MobileMenu from "$lib/components/MobileMenu.svelte";
 
-    export let expanded = false;
+    let expanded = $state(false);
 </script>
 
 <div class="max-w-7xl mx-auto">
     <div class="flex justify-between items-center h-[60px]">
         <a href="/" class="select-none">
             <div class="flex items-center">
-                <img
-                    class="h-[60px] ml-4"
-                    src="/cam-hack-logo-text.png"
-                    alt="Cam Hack Logo"
-                />
+                <img class="h-[60px] ml-4" src="/cam-hack-logo-text.png" alt="Cam Hack Logo" />
                 <span class="ml-4 text-xl font-bold">Cam Hack 2024</span>
             </div>
         </a>

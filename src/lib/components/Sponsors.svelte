@@ -9,11 +9,7 @@
                 alt="Entrepreneur First"
             />
         </a>
-        <a
-            class="inline-block"
-            target="_blank"
-            href="https://www.hudsonrivertrading.com"
-        >
+        <a class="inline-block" target="_blank" href="https://www.hudsonrivertrading.com">
             <span class="inline-block h-full align-middle"></span>
             <img
                 class="inline-block align-middle h-auto w-11/12"

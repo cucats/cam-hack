@@ -17,7 +17,7 @@ body {
 }
 
 a.theme-hyperlink {
-    @apply text-emerald-600 hover:text-emerald-700
+    @apply text-emerald-600 hover:text-emerald-700;
 }
 
 section {

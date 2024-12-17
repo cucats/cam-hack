@@ -1,13 +1,12 @@
 <script>
-    /** @type {boolean} */
-    export let expanded;
+    let { expanded = $bindable(false) } = $props();
 
     function toggle() {
         expanded = !expanded;
     }
 </script>
 
-<button on:click={toggle} class="md:hidden cursor-pointer group">
+<button onclick={toggle} class="md:hidden cursor-pointer group">
     <div class="bar" class:expanded-bar-1={expanded}></div>
     <div class="bar" class:expanded-bar-2={expanded}></div>
     <div class="bar" class:expanded-bar-3={expanded}></div>
