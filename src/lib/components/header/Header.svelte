@@ -1,6 +1,6 @@
 <script>
-    import Hamburger from "$lib/components/Hamburger.svelte";
-    import MobileMenu from "$lib/components/MobileMenu.svelte";
+    import Hamburger from "$lib/components/header/Hamburger.svelte";
+    import MobileMenu from "$lib/components/header/MobileMenu.svelte";
 
     let expanded = $state(false);
 </script>

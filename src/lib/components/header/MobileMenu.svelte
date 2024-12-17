@@ -8,7 +8,6 @@
         expanded = false;
     }
 
-    // $: is a reactive statement; it runs whenever the value of the variable changes
     $effect(() => {
         if ($navigating) closeMenu();
     });

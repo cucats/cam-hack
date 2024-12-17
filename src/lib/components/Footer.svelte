@@ -9,7 +9,7 @@
     </div>
     <div>
         <p class="text-center">
-            &copy; Cam Hack 2024. All rights reserved.<br />
+            Copyright &copy; Cam Hack 2024.<br />
             Art by Gwen Sellers
         </p>
     </div>

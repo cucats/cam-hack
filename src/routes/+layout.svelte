@@ -2,12 +2,12 @@
     import "../app.css";
 
     import Footer from "$lib/components/Footer.svelte";
-    import Header from "$lib/components/Header.svelte";
+    import Header from "$lib/components/header/Header.svelte";
 
     let { children } = $props();
 </script>
 
-<header class="bg-white shadow-md">
+<header class="relative bg-white shadow-md">
     <Header />
 </header>
 

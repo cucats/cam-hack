@@ -36,10 +36,6 @@
     </div>
 </section>
 
-<section>
-    <div class="max-w-7xl mx-auto"></div>
-</section>
-
 <section id="about">
     <About />
 </section>

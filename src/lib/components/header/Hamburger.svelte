@@ -6,6 +6,7 @@
     }
 </script>
 
+<!-- svelte-ignore a11y_consider_explicit_label -->
 <button onclick={toggle} class="md:hidden cursor-pointer group">
     <div class="bar" class:expanded-bar-1={expanded}></div>
     <div class="bar" class:expanded-bar-2={expanded}></div>
