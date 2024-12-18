@@ -1,6 +1,7 @@
 <script>
     import { slide } from "svelte/transition";
-    import Chevron from "./Chevron.svelte";
+    import Chevron from "$lib/components/Chevron.svelte";
+
     /**
      * @typedef {Object} Props
      * @property {import('svelte').Snippet} [question]
