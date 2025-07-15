@@ -2,9 +2,7 @@
     <div>
         <p class="text-center">
             <a href="mailto:help@camhack.org">Contact</a> &bull;
-            <a href="/code-of-conduct">Code of Conduct</a> &bull;
-            <a href="/privacy-policy">Privacy Policy</a> &bull;
-            <a href="/terms-of-service">Terms of Service</a>
+            <a href="/code-of-conduct">Code of Conduct</a>
         </p>
     </div>
     <div>
