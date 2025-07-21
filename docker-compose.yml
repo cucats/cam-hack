@@ -1,26 +1,8 @@
-version: '3.8'
-
 services:
-  camhack:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  web:
+    build: .
     ports:
-      - "3000:3000"
+      - "8102:3000"
     environment:
       - NODE_ENV=production
-    restart: unless-stopped
-    
-  # Development service
-  camhack-dev:
-    image: oven/bun:1-alpine
-    working_dir: /app
-    volumes:
-      - .:/app
-      - /app/node_modules
-    ports:
-      - "5173:5173"
-    environment:
-      - NODE_ENV=development
-    command: bun run dev -- --host 0.0.0.0
     restart: unless-stopped
