@@ -13,32 +13,16 @@ bun run dev
 bun run build
 ```
 
-## Docker Setup
+## Docker
 
-### Using Docker Compose
+Build:
 
-#### Development Mode
 ```bash
-docker-compose up camhack-dev
-```
-This will start a development server with hot reloading on http://localhost:5173
-
-#### Production Mode
-```bash
-docker-compose up camhack
-```
-This will build and run the production version on http://localhost:3000
-
-### Using Docker directly
-
-#### Build the image
-```bash
-docker build -t camhack .
+docker build -t cam-hack .
 ```
 
-#### Run the container
 ```bash
-docker run -p 3000:3000 camhack
+docker run -p 3000:3000 cam-hack
 ```
 
-The application will be available at http://localhost:3000
+http://localhost:3000

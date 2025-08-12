@@ -1,8 +1,0 @@
-services:
-  web:
-    build: .
-    ports:
-      - "8102:3000"
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped

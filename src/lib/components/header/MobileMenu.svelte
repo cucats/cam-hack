@@ -1,30 +1,37 @@
 <script>
-    import { navigating } from "$app/stores";
-    import { slide } from "svelte/transition";
+  import { navigating } from "$app/stores";
+  import { slide } from "svelte/transition";
 
-    let { expanded = $bindable(false) } = $props();
+  let { expanded = $bindable(false) } = $props();
 
-    function closeMenu() {
-        expanded = false;
-    }
+  const closeMenu = () => {
+    expanded = false;
+  };
 
-    $effect(() => {
-        if ($navigating) closeMenu();
-    });
+  $effect(() => {
+    if ($navigating) closeMenu();
+  });
 </script>
 
-<div class="md:hidden absolute w-full select-none drop-shadow-2xl" transition:slide>
-    <menu>
-        <a onclick={closeMenu} href="/#about">About</a>
-        <a onclick={closeMenu} href="/#schedule">Schedule</a>
-        <a onclick={closeMenu} href="/#rules">Rules</a>
-        <a onclick={closeMenu} href="/#faq">FAQ</a>
-        <a onclick={closeMenu} href="/signup" target="_blank">Sign up!</a>
-    </menu>
-</div>
+{#snippet menuLink(href, text, target = null)}
+  <a
+    onclick={closeMenu}
+    {href}
+    {target}
+    class="block bg-white px-8 py-4 text-gray-800 transition-colors active:bg-emerald-200"
+    >{text}</a
+  >
+{/snippet}
 
-<style lang="postcss">
-    a {
-        @apply block px-8 py-4 text-gray-800 transition-colors bg-white active:bg-emerald-200;
-    }
-</style>
+<div
+  class="absolute w-full drop-shadow-2xl select-none md:hidden"
+  transition:slide
+>
+  <menu>
+    {@render menuLink("/#about", "About")}
+    {@render menuLink("/#schedule", "Schedule")}
+    {@render menuLink("/#rules", "Rules")}
+    {@render menuLink("/#faq", "FAQ")}
+    {@render menuLink("/signup", "Sign up!", "_blank")}
+  </menu>
+</div>

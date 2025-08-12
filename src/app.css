@@ -1,50 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-playpen: Playpen Sans, sans-serif;
+}
 
 html {
-    scroll-behavior: smooth;
-    overscroll-behavior: none;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 body {
-    @apply flex flex-col min-h-screen font-playpen text-slate-800;
+  @apply font-playpen flex min-h-screen flex-col text-slate-800;
 }
 
 .theme-bg-gradient {
-    background-image: linear-gradient(120deg, #86e293 0%, #86e6c6 100%);
+  background-image: linear-gradient(120deg, #86e293 0%, #86e6c6 100%);
 }
 
 a.theme-hyperlink {
-    @apply text-emerald-600 hover:text-emerald-700;
+  @apply text-emerald-600 hover:text-emerald-700;
 }
 
 section {
-    @apply p-4 sm:px-8 text-lg;
+  @apply p-4 text-lg sm:px-8;
 }
 
 h1 {
-    @apply text-4xl font-bold;
+  @apply text-4xl font-bold;
 }
 
 h2 {
-    @apply text-3xl font-bold;
+  @apply text-3xl font-bold;
 }
 
 h3 {
-    @apply text-2xl font-bold;
+  @apply text-2xl font-bold;
 }
 
 h4 {
-    @apply text-xl font-bold;
+  @apply text-xl font-bold;
 }
 
 h5 {
-    @apply text-lg font-bold;
+  @apply text-lg font-bold;
 }
 
 h6 {
-    @apply text-base font-bold;
+  @apply text-base font-bold;
 }
 
 h1,
@@ -52,12 +54,12 @@ h2,
 h3,
 p,
 ul {
-    @apply mb-4;
+  @apply mb-4;
 }
 
 h4,
 h5,
 h6,
 li {
-    @apply mb-2;
+  @apply mb-2;
 }
