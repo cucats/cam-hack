@@ -4,8 +4,8 @@
     alt="Cam Hack Logo"
     class="mx-auto size-60 max-md:mb-4 sm:float-left sm:mr-8 sm:size-72 md:size-80"
   />
-  <h1 class="sm:pt-12 sm:text-5xl">Cam&nbsp;Hack&nbsp;2024</h1>
-  <h3 class="sm:text-3xl">2nd&nbsp;&ndash;&nbsp;3rd&nbsp;November</h3>
+  <h1 class="sm:pt-12 sm:text-5xl">Cam&nbsp;Hack&nbsp;2025</h1>
+  <h3 class="sm:text-3xl">1st&nbsp;&ndash;&nbsp;2nd&nbsp;November</h3>
   <div class="mb-4 flex flex-wrap gap-4 max-sm:justify-center">
     <a
       target="_blank"

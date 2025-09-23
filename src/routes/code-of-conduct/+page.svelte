@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Code of Conduct &bull; Cam Hack 2024</title>
+  <title>Code of Conduct &bull; Cam Hack 2025</title>
 </svelte:head>
 
 <section>

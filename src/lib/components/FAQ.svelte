@@ -39,7 +39,7 @@
     {#snippet question()}
       <span>Where is it?</span>
     {/snippet}
-    Cam Hack 2024 will be in the Computer Laboratory, also known as the
+    Cam Hack 2025 will be in the Computer Laboratory, also known as the
     <a href="https://maps.app.goo.gl/185n4bsvv7AXw3FM7" class="theme-hyperlink"
       >William Gates Building</a
     >.
@@ -84,7 +84,8 @@
     {#snippet question()}
       <span>What can I win?</span>
     {/snippet}
-    We have over £1000 worth of prizes to be won, including four Nintendo switches!
+    <!-- We have over £1000 worth of prizes to be won, including four Nintendo switches! -->
+      TBD.
   </FAQuestion>
   <FAQuestion>
     {#snippet question()}

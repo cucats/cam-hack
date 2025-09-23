@@ -1,4 +1,4 @@
-# Cam Hack 2024 Website
+# Cam Hack 2025 Website
 
 ## Running a development server
 

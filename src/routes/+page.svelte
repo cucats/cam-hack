@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>Cam Hack 2024</title>
+  <title>Cam Hack 2025</title>
 </svelte:head>
 
 <section class="theme-bg-gradient sm:p-8">
@@ -24,7 +24,7 @@
   <div class="mx-auto max-w-7xl">
     <a
       target="_blank"
-      href="https://cam-hack-2024.devpost.com/project-gallery"
+      href="https://cam-hack-2025.devpost.com/project-gallery"
       class="text-center text-violet-700 hover:text-violet-800"
     >
       <img

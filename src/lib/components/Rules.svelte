@@ -59,7 +59,7 @@
     </li>
     <li>
       Submissions will be made to <a
-        href="https://cam-hack-2024.devpost.com"
+        href="https://cam-hack-2025.devpost.com"
         class="theme-hyperlink">Devpost</a
       >.
     </li>
