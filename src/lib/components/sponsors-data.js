@@ -5,12 +5,12 @@ export const sponsors = [
     logo: "/entrepreneur-first-logo.png",
     className: "w-2/5",
   },
-  {
-    name: "Hudson River Trading",
-    url: "https://www.hudsonrivertrading.com",
-    logo: "/hudson-river-trading-logo.png",
-    className: "w-11/12",
-  },
+  // {
+  //   name: "Hudson River Trading",
+  //   url: "https://www.hudsonrivertrading.com",
+  //   logo: "/hudson-river-trading-logo.png",
+  //   className: "w-11/12",
+  // }
   {
     name: "Jane Street",
     url: "https://janestreet.com",
