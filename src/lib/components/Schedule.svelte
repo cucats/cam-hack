@@ -2,17 +2,6 @@
   <h2>Schedule</h2>
   <div class="flex max-md:flex-col">
     <div class="flex-1">
-      <h4>Friday</h4>
-      <ul>
-        <li>
-          <strong>17:00&ndash;19:00</strong> &bull; Check-in and socials
-        </li>
-        <li>
-          <strong>18:00</strong> &bull; <em>Dinner</em>
-        </li>
-      </ul>
-    </div>
-    <div class="flex-1">
       <h4>Saturday</h4>
       <ul>
         <li>
