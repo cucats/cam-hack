@@ -85,7 +85,7 @@
       <span>What can I win?</span>
     {/snippet}
     <!-- We have over £1000 worth of prizes to be won, including four Nintendo switches! -->
-      TBD.
+    TBD.
   </FAQuestion>
   <FAQuestion>
     {#snippet question()}
@@ -94,8 +94,8 @@
     You can ask us anything in our
     <a target="_blank" href="/discord" class="theme-hyperlink">Discord server</a
     >! You can also email us at
-    <a href="mailto:help@camhack.org" class="theme-hyperlink"
-      >help@camhack.org</a
+    <a href="mailto:camhack@cucats.org" class="theme-hyperlink"
+      >camhack@cucats.org</a
     >, or speak to us in person at the event, where we will be happy to answer.
   </FAQuestion>
 </div>
