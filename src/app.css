@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playpen: Ubuntu Mono, sans-serif;
+  --font-playpen: Ubuntu Mono, monospace;
 }
 
 html {
