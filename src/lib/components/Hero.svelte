@@ -17,11 +17,11 @@
     <a
       target="_blank"
       href="/signup"
-      class="rounded-2xl bg-emerald-100/80 px-6 py-4 text-green-900 transition-all select-none hover:scale-105 hover:bg-emerald-100"
+      class="cursor-not-allowed rounded-2xl bg-gray-300/80 px-6 py-4 text-gray-600 transition-all select-none"
     >
-      Sign up here!
+      Signups closed
     </a>
   </div>
-  <p class="text-xl">What can you make in 32 hours?</p>
+  <p class="text-xl">What can you make in 2 days?</p>
   <p class="clear-left"></p>
 </div>

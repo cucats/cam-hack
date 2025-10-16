@@ -56,9 +56,7 @@
     {#snippet question()}
       <span>How do I sign up?</span>
     {/snippet}
-    Fill out the
-    <a target="_blank" href="/signup" class="theme-hyperlink">sign up form</a> by
-    23:59 24th October!
+    Signups are now closed. We look forward to seeing you at the event!
   </FAQuestion>
   <FAQuestion>
     {#snippet question()}
@@ -84,8 +82,9 @@
     {#snippet question()}
       <span>What can I win?</span>
     {/snippet}
-    <!-- We have over £1000 worth of prizes to be won, including four Nintendo switches! -->
-    TBD.
+    For the winning team, each person will receive £200 and can choose from a range
+    of prizes including: smartwatches, Steam vouchers, Amazon vouchers, or Sony XM4
+    headphones.
   </FAQuestion>
   <FAQuestion>
     {#snippet question()}
