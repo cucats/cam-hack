@@ -3,7 +3,7 @@
   <h3>Entry</h3>
   <ul class="list-disc pl-8">
     <li>
-      The maximum team size is 4. Any bigger, and we might have to split you up.
+      The maximum team size is 5. Any bigger, and we might have to split you up.
       Solo participation is allowed, but hacking is better with other people!
     </li>
     <li>

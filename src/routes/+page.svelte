@@ -20,7 +20,7 @@
   <Sponsors />
 </section>
 
-<section class="mb-8 px-0 md:p-4">
+<!-- <section class="mb-8 px-0 md:p-4">
   <div class="mx-auto max-w-7xl">
     <a
       target="_blank"
@@ -34,7 +34,7 @@
       />
     </a>
   </div>
-</section>
+</section> -->
 
 <section id="about">
   <About />
