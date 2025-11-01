@@ -12,11 +12,11 @@
       <p class="text-center">Athena Eng</p>
     </div>
     <div class="flex flex-col items-center">
-      <div
-        class="mb-2 flex h-32 w-32 items-center justify-center rounded-full bg-gray-200 shadow-lg"
-      >
-        <p class="text-center text-sm text-gray-600">Oliver Greenwood</p>
-      </div>
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/oliver.png"
+        alt="Oliver Greenwood"
+      />
       <p class="text-center">Oliver Greenwood</p>
     </div>
     <div class="flex flex-col items-center">
