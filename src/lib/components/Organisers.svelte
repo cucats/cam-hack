@@ -1,10 +1,47 @@
 <div class="mx-auto max-w-7xl">
   <h2>Organising Committee</h2>
-  <ul class="list-none pl-0 sm:columns-2 md:columns-3 lg:columns-4">
-    <li>Athena Eng</li>
-    <li>Oliver Greenwood</li>
-    <li>James Leung</li>
-    <li>Jadon Mensah</li>
-    <li>Uliana Ronska</li>
-  </ul>
+  <div
+    class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+  >
+    <div class="flex flex-col items-center">
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/athena.jpg"
+        alt="Athena Eng"
+      />
+      <p class="text-center">Athena Eng</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <div
+        class="mb-2 flex h-32 w-32 items-center justify-center rounded-full bg-gray-200 shadow-lg"
+      >
+        <p class="text-center text-sm text-gray-600">Oliver Greenwood</p>
+      </div>
+      <p class="text-center">Oliver Greenwood</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/james.png"
+        alt="James Leung"
+      />
+      <p class="text-center">James Leung</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/jadon.png"
+        alt="Jadon Mensah"
+      />
+      <p class="text-center">Jadon Mensah</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/uliana.jpg"
+        alt="Uliana Ronska"
+      />
+      <p class="text-center">Uliana Ronska</p>
+    </div>
+  </div>
 </div>
