@@ -6,6 +6,22 @@
     <div class="flex flex-col items-center">
       <img
         class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/james.png"
+        alt="James Leung"
+      />
+      <p class="text-center">James Leung</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
+        src="/uliana.jpg"
+        alt="Uliana Ronska"
+      />
+      <p class="text-center">Uliana Ronska</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
         src="/athena.jpg"
         alt="Athena Eng"
       />
@@ -22,26 +38,10 @@
     <div class="flex flex-col items-center">
       <img
         class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
-        src="/james.png"
-        alt="James Leung"
-      />
-      <p class="text-center">James Leung</p>
-    </div>
-    <div class="flex flex-col items-center">
-      <img
-        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
         src="/jadon.png"
         alt="Jadon Mensah"
       />
       <p class="text-center">Jadon Mensah</p>
-    </div>
-    <div class="flex flex-col items-center">
-      <img
-        class="mb-2 h-32 w-32 rounded-full object-cover shadow-lg"
-        src="/uliana.jpg"
-        alt="Uliana Ronska"
-      />
-      <p class="text-center">Uliana Ronska</p>
     </div>
   </div>
 </div>
