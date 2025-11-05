@@ -18,6 +18,12 @@ export const sponsors = [
     className: "w-11/12",
   },
   {
+    name: "Founders at the University of Cambridge",
+    url: "https://founders.cam.ac.uk",
+    logo: "/founders-logo.png",
+    className: "w-11/12",
+  },
+  {
     name: "Qube RT",
     url: "https://www.qube-rt.com",
     logo: "/qube-rt-logo.png",
