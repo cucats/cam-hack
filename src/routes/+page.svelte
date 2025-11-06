@@ -12,8 +12,16 @@
   <title>Cam Hack 2025</title>
 </svelte:head>
 
-<section class="theme-bg-gradient sm:p-8">
+<section class="sm:p-8">
   <Hero />
+</section>
+
+<section class="unintended-section p-0 m-0">
+  <img
+    src="/unintended.png"
+    alt="Unintended"
+    class="w-full block m-0"
+  />
 </section>
 
 <section>
@@ -63,5 +71,16 @@
 
   section:nth-child(even) {
     background-color: #ffffff;
+  }
+
+  section.unintended-section {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  section.unintended-section img {
+    margin: 0 !important;
+    display: block;
   }
 </style>
