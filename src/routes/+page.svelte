@@ -16,7 +16,10 @@
   <Hero />
 </section>
 
-<section class="unintended-section p-0 m-0">
+<section class="unintended-section m-0">
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-8">
+    <h1 class="text-center">Unintended Consequences</h1>
+  </div>
   <img
     src="/unintended.png"
     alt="Unintended"
@@ -75,7 +78,6 @@
 
   section.unintended-section {
     background-color: transparent !important;
-    padding: 0 !important;
     margin: 0 !important;
   }
 
