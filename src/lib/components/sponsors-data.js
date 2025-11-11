@@ -35,6 +35,12 @@ export const sponsors = [
     logo: "/sierra-logo.png",
     className: "w-3/5",
   },
+  {
+    name: "TPP UK",
+    url: "https://tpp-uk.com",
+    logo: "/tpp-logo.png",
+    className: "w-3/5",
+  }
 ];
 
 export const organizers = {
