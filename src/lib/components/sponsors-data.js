@@ -40,7 +40,7 @@ export const sponsors = [
     url: "https://tpp-uk.com",
     logo: "/tpp-logo.png",
     className: "w-3/5",
-  }
+  },
 ];
 
 export const organizers = {

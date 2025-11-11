@@ -17,23 +17,19 @@
 </section>
 
 <section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-8">
-    <h1 class="text-center">Unintended Consequences</h1>
+  <div class="mx-auto max-w-7xl px-4 sm:px-8">
+    <h1 class="py-8 text-center">Unintended Consequences</h1>
+    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
+      <img
+        src="/unintended.png"
+        alt="Unintended"
+        class="m-0 block w-full rounded-3xl"
+      />
+    </a>
   </div>
-  <a
-    target="_blank"
-    href="https://cam-hack-2025.devpost.com"
-    class="block"
-  >
-    <img
-      src="/unintended.png"
-      alt="Unintended"
-      class="w-full block m-0 rounded-3xl"
-    />
-  </a>
 </section>
 
-<section>
+<section class="sponsors-section">
   <Sponsors />
 </section>
 
@@ -90,5 +86,9 @@
   section.unintended-section img {
     margin: 0 !important;
     display: block;
+  }
+
+  section.sponsors-section {
+    background-color: #ffffff !important;
   }
 </style>

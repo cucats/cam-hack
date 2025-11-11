@@ -4,7 +4,9 @@
 
 <div class="mx-auto max-w-7xl">
   <h3 class="text-center sm:text-3xl">Sponsored by</h3>
-  <grid class="mb-10 grid grid-cols-2 text-center sm:mb-12 sm:grid-cols-3">
+  <grid
+    class="mb-10 grid grid-cols-2 place-items-center text-center sm:mb-12 sm:grid-cols-3 lg:grid-cols-4"
+  >
     {#each sponsors as sponsor}
       <a class="inline-block" target="_blank" href={sponsor.url}>
         <span class="inline-block h-full align-middle"></span>
