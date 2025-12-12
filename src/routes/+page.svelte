@@ -18,7 +18,7 @@
 
 <section class="unintended-section m-0">
   <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Consequences</h1>
+    <h1 class="py-8 text-center">Unintended Behaviour</h1>
     <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
       <img
         src="/unintended.png"
