@@ -1,20 +1,15 @@
 <script>
   import "../app.css";
-
-  import Footer from "$lib/components/Footer.svelte";
-  import Header from "$lib/components/header/Header.svelte";
+  import HeaderNew from "$lib/components/header/HeaderNew.svelte";
+  import ThreeBackground from "$lib/components/ThreeBackground.svelte";
 
   let { children } = $props();
 </script>
 
-<header class="relative bg-white shadow-md">
-  <Header />
-</header>
+<ThreeBackground />
 
-<main class="flex-1">
+<HeaderNew />
+
+<main class="relative z-10">
   {@render children()}
 </main>
-
-<footer class="theme-bg-gradient p-8">
-  <Footer />
-</footer>
