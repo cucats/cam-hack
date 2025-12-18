@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playpen: Ubuntu Mono, monospace;
+  --font-playpen: "Ubuntu Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-neon-green: #00ff88;
+  --color-emerald: #0a9254;
+  --color-dark-bg: #0d1117;
+  --color-dark-secondary: #161b22;
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #8b949e;
+  --color-purple: #9945ff;
+  --color-cyan: #00d4ff;
 }
 
 html {
@@ -11,6 +20,24 @@ html {
 
 body {
   @apply font-playpen flex min-h-screen flex-col text-slate-800;
+}
+
+body:has(.splash-page) {
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+.splash-page {
+  font-family: "Space Grotesk", "Ubuntu Mono", monospace;
+}
+
+.splash-page h1,
+.splash-page h2,
+.splash-page h3,
+.splash-page h4,
+.splash-page h5,
+.splash-page h6 {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .theme-bg-gradient {
@@ -62,4 +89,32 @@ h5,
 h6,
 li {
   @apply mb-2;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff88, #0a9254);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0a9254, #00ff88);
+}
+
+::selection {
+  background: rgba(0, 255, 136, 0.3);
+  color: #e6edf3;
+}
+
+.splash-page ::selection {
+  background: rgba(0, 255, 136, 0.3);
+  color: #e6edf3;
 }
