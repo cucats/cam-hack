@@ -2,6 +2,12 @@
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --font-splash-display: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --color-splash-ink: #06160e;
+  --color-splash-green: #22c55e;
+  --color-splash-mint: #86e6c6;
+  --color-splash-surface: #fbfbfb;
 }
 
 html {
