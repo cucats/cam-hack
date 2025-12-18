@@ -2,6 +2,10 @@
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-body: Ubuntu Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 html {
@@ -10,7 +14,13 @@ html {
 }
 
 body {
-  @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  @apply flex min-h-screen flex-col;
+  font-family: var(--font-body);
+  color: rgba(241, 245, 249, 0.92);
+  background:
+    radial-gradient(1200px 900px at 18% 0%, rgba(34, 197, 94, 0.11), rgba(0, 0, 0, 0) 55%),
+    radial-gradient(900px 700px at 82% 22%, rgba(94, 234, 212, 0.08), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(180deg, rgba(2, 6, 10, 1), rgba(2, 6, 10, 0.95));
 }
 
 .theme-bg-gradient {
@@ -27,14 +37,17 @@ section {
 
 h1 {
   @apply text-4xl font-bold;
+  font-family: var(--font-display);
 }
 
 h2 {
   @apply text-3xl font-bold;
+  font-family: var(--font-display);
 }
 
 h3 {
   @apply text-2xl font-bold;
+  font-family: var(--font-display);
 }
 
 h4 {
