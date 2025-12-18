@@ -7,10 +7,19 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
+  background: #0a0f1a;
 }
 
 body {
-  @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  @apply font-playpen flex min-h-screen flex-col;
+  background: #0a0f1a;
+  color: #86e293;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .theme-bg-gradient {
@@ -18,7 +27,7 @@ body {
 }
 
 a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+  @apply text-emerald-400 hover:text-emerald-300;
 }
 
 section {
