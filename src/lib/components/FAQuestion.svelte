@@ -2,29 +2,62 @@
   import { slide } from "svelte/transition";
   import Chevron from "$lib/components/Chevron.svelte";
 
-  /**
-   * @typedef {Object} Props
-   * @property {import('svelte').Snippet} [question]
-   * @property {import('svelte').Snippet} [children]
-   */
-
-  /** @type {Props} */
   let { question, children } = $props();
 
   let expanded = $state(false);
 </script>
 
-<div class="mb-4">
+<div class="faq-item">
   <button
-    class="mb-2 cursor-pointer font-bold"
+    class="faq-button"
     onclick={() => (expanded = !expanded)}
   >
     {@render question()}
     <Chevron {expanded} />
   </button>
   {#if expanded}
-    <div class="mb-2" transition:slide>
+    <div class="faq-content" transition:slide>
       {@render children()}
     </div>
   {/if}
 </div>
+
+<style>
+  .faq-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+  }
+
+  .faq-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .faq-button:hover {
+    color: var(--color-primary);
+  }
+
+  .faq-content {
+    padding-top: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+</style>
