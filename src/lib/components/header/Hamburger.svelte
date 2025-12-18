@@ -17,7 +17,7 @@
   @reference "../../../app.css"
 
     .bar {
-    @apply my-1 h-1 w-7 rounded-full bg-slate-700 transition-all;
+    @apply my-1 h-1 w-7 rounded-full bg-white transition-all;
   }
 
   .expanded-bar-1 {
