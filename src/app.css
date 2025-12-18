@@ -2,6 +2,14 @@
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --font-display: Orbitron, sans-serif;
+  --font-body: Space Grotesk, sans-serif;
+  --color-neon-green: #00ff88;
+  --color-neon-cyan: #00d4ff;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-surface: #111111;
+  --color-dark-card: #1a1a1a;
+  --color-dark-navy: #0a0f1a;
 }
 
 html {
@@ -10,19 +18,93 @@ html {
 }
 
 body {
-  @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  @apply font-body flex min-h-screen flex-col;
+  background-color: var(--color-dark-bg);
+  color: #ffffff;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-playpen);
+}
+
+.text-neon-green {
+  color: var(--color-neon-green);
+}
+
+.text-neon-cyan {
+  color: var(--color-neon-cyan);
+}
+
+.bg-dark-surface {
+  background-color: var(--color-dark-surface);
+}
+
+.bg-dark-card {
+  background-color: var(--color-dark-card);
+}
+
+.glow-green {
+  text-shadow:
+    0 0 10px var(--color-neon-green),
+    0 0 20px var(--color-neon-green),
+    0 0 40px var(--color-neon-green);
+}
+
+.glow-cyan {
+  text-shadow:
+    0 0 10px var(--color-neon-cyan),
+    0 0 20px var(--color-neon-cyan),
+    0 0 40px var(--color-neon-cyan);
+}
+
+.box-glow-green {
+  box-shadow:
+    0 0 20px rgba(0, 255, 136, 0.3),
+    0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+.box-glow-cyan {
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.3),
+    0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-neon-green) 0%,
+    var(--color-neon-cyan) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .theme-bg-gradient {
-  background-image: linear-gradient(120deg, #86e293 0%, #86e6c6 100%);
+  background-image: linear-gradient(120deg, #00ff88 0%, #00d4ff 100%);
 }
 
 a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+  @apply transition-colors;
+  color: var(--color-neon-green);
 }
 
-section {
-  @apply p-4 text-lg sm:px-8;
+a.theme-hyperlink:hover {
+  color: var(--color-neon-cyan);
+}
+
+.section-dark {
+  @apply p-8 text-lg sm:px-12;
+  background-color: var(--color-dark-bg);
+}
+
+.section-surface {
+  @apply p-8 text-lg sm:px-12;
+  background-color: var(--color-dark-surface);
 }
 
 h1 {
@@ -62,4 +144,64 @@ h5,
 h6,
 li {
   @apply mb-2;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neon-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-cyan);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
 }
