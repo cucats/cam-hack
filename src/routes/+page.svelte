@@ -1,5 +1,7 @@
 <script>
+  import ThreeBackground from "$lib/components/ThreeBackground.svelte";
   import Hero from "$lib/components/Hero.svelte";
+  import FeaturedProjects from "$lib/components/FeaturedProjects.svelte";
   import Sponsors from "$lib/components/Sponsors.svelte";
   import About from "$lib/components/About.svelte";
   import Schedule from "$lib/components/Schedule.svelte";
@@ -10,85 +12,83 @@
 
 <svelte:head>
   <title>Cam Hack 2025</title>
+  <meta
+    name="description"
+    content="Cam Hack is a 2 day hackathon for the innovative minds at the University of Cambridge."
+  />
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
-</section>
+<div class="splash-page">
+  <ThreeBackground />
 
-<section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Behaviour</h1>
-    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
-      <img
-        src="/unintended.png"
-        alt="Unintended"
-        class="m-0 block w-full rounded-3xl"
-      />
-    </a>
-  </div>
-</section>
+  <section class="hero-section relative">
+    <Hero />
+  </section>
 
-<section class="sponsors-section">
-  <Sponsors />
-</section>
+  <section class="projects-section">
+    <FeaturedProjects />
+  </section>
 
-<!-- <section class="mb-8 px-0 md:p-4">
-  <div class="mx-auto max-w-7xl">
-    <a
-      target="_blank"
-      href="https://cam-hack-2025.devpost.com/project-gallery"
-      class="text-center text-violet-700 hover:text-violet-800"
-    >
-      <img
-        class="w-full md:rounded-3xl md:shadow-2xl md:transition-all md:hover:scale-[1.01]"
-        src="/cam-hack-theme.png"
-        alt="Turning Sci-fi into reality"
-      />
-    </a>
-  </div>
-</section> -->
+  <section id="about">
+    <About />
+  </section>
 
-<section id="about">
-  <About />
-</section>
+  <section>
+    <Sponsors />
+  </section>
 
-<section id="schedule">
-  <Schedule />
-</section>
+  <section id="schedule">
+    <Schedule />
+  </section>
 
-<section id="rules">
-  <Rules />
-</section>
+  <section id="rules">
+    <Rules />
+  </section>
 
-<section id="faq">
-  <FAQ />
-</section>
+  <section id="faq">
+    <FAQ />
+  </section>
 
-<section>
-  <Organisers />
-</section>
+  <section>
+    <Organisers />
+  </section>
+
+  <footer class="section-dark border-t border-emerald-500/20 py-12">
+    <div class="mx-auto max-w-7xl px-4 text-center sm:px-8">
+      <div
+        class="mb-6 flex flex-wrap items-center justify-center gap-6 text-gray-400"
+      >
+        <a
+          href="mailto:camhack@cucats.org"
+          class="transition-colors hover:text-emerald-400">Contact</a
+        >
+        <span class="text-emerald-500/50">•</span>
+        <a
+          href="/code-of-conduct"
+          class="transition-colors hover:text-emerald-400">Code of Conduct</a
+        >
+        <span class="text-emerald-500/50">•</span>
+        <a href="/discord" class="transition-colors hover:text-emerald-400"
+          >Discord</a
+        >
+      </div>
+      <p class="mb-2 text-gray-500">Copyright © Cam Hack 2025</p>
+      <p class="text-sm text-gray-600">Art by Gwen Sellers</p>
+    </div>
+  </footer>
+</div>
 
 <style>
-  section:nth-child(odd) {
-    background-color: #fafafa;
+  .splash-page {
+    position: relative;
   }
 
-  section:nth-child(even) {
-    background-color: #ffffff;
+  .hero-section {
+    min-height: 100vh;
   }
 
-  section.unintended-section {
-    background-color: transparent !important;
-    margin: 0 !important;
-  }
-
-  section.unintended-section img {
-    margin: 0 !important;
-    display: block;
-  }
-
-  section.sponsors-section {
-    background-color: #ffffff !important;
+  section {
+    position: relative;
+    z-index: 1;
   }
 </style>
