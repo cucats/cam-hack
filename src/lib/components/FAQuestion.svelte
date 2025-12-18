@@ -1,29 +1,43 @@
 <script>
   import { slide } from "svelte/transition";
-  import Chevron from "$lib/components/Chevron.svelte";
 
-  /**
-   * @typedef {Object} Props
-   * @property {import('svelte').Snippet} [question]
-   * @property {import('svelte').Snippet} [children]
-   */
-
-  /** @type {Props} */
   let { question, children } = $props();
 
   let expanded = $state(false);
 </script>
 
-<div class="mb-4">
+<div
+  class="glass-card overflow-hidden rounded-xl border border-zinc-800 transition-all duration-300 hover:border-emerald-500/30"
+>
   <button
-    class="mb-2 cursor-pointer font-bold"
+    class="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left transition-colors hover:bg-zinc-800/30"
     onclick={() => (expanded = !expanded)}
   >
-    {@render question()}
-    <Chevron {expanded} />
+    <span class="pr-4 font-semibold text-white">
+      {@render question()}
+    </span>
+    <span
+      class="text-emerald-400 transition-transform duration-300 {expanded
+        ? 'rotate-180'
+        : ''}"
+    >
+      <svg
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </span>
   </button>
   {#if expanded}
-    <div class="mb-2" transition:slide>
+    <div class="px-6 pb-4 text-zinc-300" transition:slide>
       {@render children()}
     </div>
   {/if}

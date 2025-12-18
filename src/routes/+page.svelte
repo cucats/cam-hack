@@ -1,5 +1,6 @@
 <script>
   import Hero from "$lib/components/Hero.svelte";
+  import FeaturedProjects from "$lib/components/FeaturedProjects.svelte";
   import Sponsors from "$lib/components/Sponsors.svelte";
   import About from "$lib/components/About.svelte";
   import Schedule from "$lib/components/Schedule.svelte";
@@ -10,85 +11,43 @@
 
 <svelte:head>
   <title>Cam Hack 2025</title>
+  <meta
+    name="description"
+    content="Cam Hack 2025 - A 2 day hackathon for the innovative minds at the University of Cambridge"
+  />
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
-</section>
+<Hero />
 
-<section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Behaviour</h1>
-    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
-      <img
-        src="/unintended.png"
-        alt="Unintended"
-        class="m-0 block w-full rounded-3xl"
-      />
-    </a>
+<FeaturedProjects />
+
+<About />
+
+<Sponsors />
+
+<Schedule />
+
+<Rules />
+
+<FAQ />
+
+<Organisers />
+
+<section class="section-padding relative">
+  <div
+    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-900/20 via-transparent to-transparent"
+  ></div>
+  <div class="relative z-10 mx-auto max-w-4xl text-center">
+    <div class="glass-card rounded-2xl border border-zinc-800 p-8">
+      <p class="mb-4 text-zinc-400">
+        <a href="mailto:camhack@cucats.org" class="theme-hyperlink">Contact</a>
+        •
+        <a href="/code-of-conduct" class="theme-hyperlink">Code of Conduct</a>
+      </p>
+      <p class="text-sm text-zinc-500">
+        Copyright © Cam Hack 2025.<br />
+        Art by Gwen Sellers
+      </p>
+    </div>
   </div>
 </section>
-
-<section class="sponsors-section">
-  <Sponsors />
-</section>
-
-<!-- <section class="mb-8 px-0 md:p-4">
-  <div class="mx-auto max-w-7xl">
-    <a
-      target="_blank"
-      href="https://cam-hack-2025.devpost.com/project-gallery"
-      class="text-center text-violet-700 hover:text-violet-800"
-    >
-      <img
-        class="w-full md:rounded-3xl md:shadow-2xl md:transition-all md:hover:scale-[1.01]"
-        src="/cam-hack-theme.png"
-        alt="Turning Sci-fi into reality"
-      />
-    </a>
-  </div>
-</section> -->
-
-<section id="about">
-  <About />
-</section>
-
-<section id="schedule">
-  <Schedule />
-</section>
-
-<section id="rules">
-  <Rules />
-</section>
-
-<section id="faq">
-  <FAQ />
-</section>
-
-<section>
-  <Organisers />
-</section>
-
-<style>
-  section:nth-child(odd) {
-    background-color: #fafafa;
-  }
-
-  section:nth-child(even) {
-    background-color: #ffffff;
-  }
-
-  section.unintended-section {
-    background-color: transparent !important;
-    margin: 0 !important;
-  }
-
-  section.unintended-section img {
-    margin: 0 !important;
-    display: block;
-  }
-
-  section.sponsors-section {
-    background-color: #ffffff !important;
-  }
-</style>

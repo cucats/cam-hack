@@ -1,37 +1,52 @@
 <script>
-  import { navigating } from "$app/stores";
   import { slide } from "svelte/transition";
 
-  let { expanded = $bindable(false) } = $props();
+  let { expanded = $bindable() } = $props();
 
-  const closeMenu = () => {
+  function closeMenu() {
     expanded = false;
-  };
-
-  $effect(() => {
-    if ($navigating) closeMenu();
-  });
+  }
 </script>
 
-{#snippet menuLink(href, text, target = null)}
-  <a
-    onclick={closeMenu}
-    {href}
-    {target}
-    class="block bg-white px-8 py-4 text-gray-800 transition-colors active:bg-emerald-200"
-    >{text}</a
-  >
-{/snippet}
-
-<div
-  class="absolute w-full drop-shadow-2xl select-none md:hidden"
+<nav
   transition:slide
+  class="absolute top-[60px] right-0 left-0 z-50 border-b border-zinc-800 bg-black/95 backdrop-blur-xl md:hidden"
 >
-  <menu>
-    {@render menuLink("/#about", "About")}
-    {@render menuLink("/#schedule", "Schedule")}
-    {@render menuLink("/#rules", "Rules")}
-    {@render menuLink("/#faq", "FAQ")}
-    {@render menuLink("/signup", "Sign up!", "_blank")}
-  </menu>
-</div>
+  <div class="flex flex-col space-y-2 p-4">
+    <a
+      class="rounded-xl px-4 py-3 text-zinc-300 transition-all hover:bg-zinc-800/50 hover:text-emerald-400"
+      href="/#about"
+      onclick={closeMenu}
+    >
+      About
+    </a>
+    <a
+      class="rounded-xl px-4 py-3 text-zinc-300 transition-all hover:bg-zinc-800/50 hover:text-emerald-400"
+      href="/#schedule"
+      onclick={closeMenu}
+    >
+      Schedule
+    </a>
+    <a
+      class="rounded-xl px-4 py-3 text-zinc-300 transition-all hover:bg-zinc-800/50 hover:text-emerald-400"
+      href="/#rules"
+      onclick={closeMenu}
+    >
+      Rules
+    </a>
+    <a
+      class="rounded-xl px-4 py-3 text-zinc-300 transition-all hover:bg-zinc-800/50 hover:text-emerald-400"
+      href="/#faq"
+      onclick={closeMenu}
+    >
+      FAQ
+    </a>
+    <a
+      class="rounded-xl border border-emerald-500/50 bg-emerald-500/20 px-4 py-3 text-center text-emerald-300 transition-all hover:bg-emerald-500/30"
+      href="/signup"
+      onclick={closeMenu}
+    >
+      Sign up!
+    </a>
+  </div>
+</nav>

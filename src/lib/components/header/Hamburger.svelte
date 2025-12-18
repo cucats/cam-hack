@@ -1,34 +1,27 @@
 <script>
-  let { expanded = $bindable(false) } = $props();
-
-  function toggle() {
-    expanded = !expanded;
-  }
+  let { expanded = $bindable() } = $props();
 </script>
 
-<!-- svelte-ignore a11y_consider_explicit_label -->
-<button onclick={toggle} class="group cursor-pointer md:hidden">
-  <div class="bar" class:expanded-bar-1={expanded}></div>
-  <div class="bar" class:expanded-bar-2={expanded}></div>
-  <div class="bar" class:expanded-bar-3={expanded}></div>
+<button
+  class="p-2 text-zinc-300 transition-colors hover:text-emerald-400 md:hidden"
+  onclick={() => (expanded = !expanded)}
+  aria-label="Toggle menu"
+>
+  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    {#if expanded}
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18L18 6M6 6l12 12"
+      />
+    {:else}
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    {/if}
+  </svg>
 </button>
-
-<style lang="postcss">
-  @reference "../../../app.css"
-
-    .bar {
-    @apply my-1 h-1 w-7 rounded-full bg-slate-700 transition-all;
-  }
-
-  .expanded-bar-1 {
-    transform: translateY(8px) rotate(-45deg);
-  }
-
-  .expanded-bar-2 {
-    opacity: 0;
-  }
-
-  .expanded-bar-3 {
-    transform: translateY(-8px) rotate(45deg);
-  }
-</style>
