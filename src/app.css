@@ -1,65 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playpen: Ubuntu Mono, monospace;
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-space-mono: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
+  background: #000a08;
 }
 
 body {
-  @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  background: #000a08;
+  color: #e0ffe8;
+  overflow-x: hidden;
 }
 
-.theme-bg-gradient {
-  background-image: linear-gradient(120deg, #86e293 0%, #86e6c6 100%);
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
 }
 
-a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-section {
-  @apply p-4 text-lg sm:px-8;
+::-webkit-scrollbar-track {
+  background: #000a08;
 }
 
-h1 {
-  @apply text-4xl font-bold;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff87, #64ffda);
+  border-radius: 6px;
 }
 
-h2 {
-  @apply text-3xl font-bold;
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #64ffda, #00ff87);
 }
 
-h3 {
-  @apply text-2xl font-bold;
-}
-
-h4 {
-  @apply text-xl font-bold;
-}
-
-h5 {
-  @apply text-lg font-bold;
-}
-
-h6 {
-  @apply text-base font-bold;
-}
-
-h1,
-h2,
-h3,
-p,
-ul {
-  @apply mb-4;
-}
-
-h4,
-h5,
-h6,
-li {
-  @apply mb-2;
+::selection {
+  background: rgba(0, 255, 135, 0.3);
+  color: #00ff87;
 }
