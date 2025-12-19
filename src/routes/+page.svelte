@@ -1,94 +1,61 @@
 <script>
-  import Hero from "$lib/components/Hero.svelte";
-  import Sponsors from "$lib/components/Sponsors.svelte";
-  import About from "$lib/components/About.svelte";
-  import Schedule from "$lib/components/Schedule.svelte";
-  import Rules from "$lib/components/Rules.svelte";
-  import FAQ from "$lib/components/FAQ.svelte";
-  import Organisers from "$lib/components/Organisers.svelte";
+  import ThreeBackground from "$lib/components/ThreeBackground.svelte";
+  import FloatingNav from "$lib/components/FloatingNav.svelte";
+  import SplashHero from "$lib/components/SplashHero.svelte";
+  import FeaturedProject from "$lib/components/FeaturedProject.svelte";
+  import SplashSponsors from "$lib/components/SplashSponsors.svelte";
+  import SplashAbout from "$lib/components/SplashAbout.svelte";
+  import SplashSchedule from "$lib/components/SplashSchedule.svelte";
+  import SplashRules from "$lib/components/SplashRules.svelte";
+  import SplashFAQ from "$lib/components/SplashFAQ.svelte";
+  import SplashOrganisers from "$lib/components/SplashOrganisers.svelte";
 </script>
 
 <svelte:head>
   <title>Cam Hack 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
-</section>
-
-<section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Behaviour</h1>
-    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
-      <img
-        src="/unintended.png"
-        alt="Unintended"
-        class="m-0 block w-full rounded-3xl"
-      />
-    </a>
-  </div>
-</section>
-
-<section class="sponsors-section">
-  <Sponsors />
-</section>
-
-<!-- <section class="mb-8 px-0 md:p-4">
-  <div class="mx-auto max-w-7xl">
-    <a
-      target="_blank"
-      href="https://cam-hack-2025.devpost.com/project-gallery"
-      class="text-center text-violet-700 hover:text-violet-800"
-    >
-      <img
-        class="w-full md:rounded-3xl md:shadow-2xl md:transition-all md:hover:scale-[1.01]"
-        src="/cam-hack-theme.png"
-        alt="Turning Sci-fi into reality"
-      />
-    </a>
-  </div>
-</section> -->
-
-<section id="about">
-  <About />
-</section>
-
-<section id="schedule">
-  <Schedule />
-</section>
-
-<section id="rules">
-  <Rules />
-</section>
-
-<section id="faq">
-  <FAQ />
-</section>
-
-<section>
-  <Organisers />
-</section>
+<div class="splash-page">
+  <FloatingNav />
+  <ThreeBackground />
+  <SplashHero />
+  <FeaturedProject />
+  <SplashSponsors />
+  <SplashAbout />
+  <SplashSchedule />
+  <SplashRules />
+  <SplashFAQ />
+  <SplashOrganisers />
+</div>
 
 <style>
-  section:nth-child(odd) {
-    background-color: #fafafa;
+  .splash-page {
+    background: linear-gradient(180deg, #0a0e27 0%, #1a1e3f 50%, #0a0e27 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
   }
 
-  section:nth-child(even) {
-    background-color: #ffffff;
+  .splash-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 204, 255, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(255, 0, 170, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
   }
 
-  section.unintended-section {
-    background-color: transparent !important;
-    margin: 0 !important;
-  }
-
-  section.unintended-section img {
-    margin: 0 !important;
-    display: block;
-  }
-
-  section.sponsors-section {
-    background-color: #ffffff !important;
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    background: #0a0e27;
   }
 </style>
