@@ -10,7 +10,9 @@ html {
 }
 
 body {
-  @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 .theme-bg-gradient {
