@@ -26,7 +26,10 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-node": "^5.2.14",
-    "@tailwindcss/vite": "^4.1.11"
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/three": "^0.182.0",
+    "gsap": "^3.14.2",
+    "three": "^0.182.0"
   },
   "prettier": {
     "plugins": [
