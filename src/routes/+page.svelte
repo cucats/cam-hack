@@ -1,94 +1,53 @@
 <script>
-  import Hero from "$lib/components/Hero.svelte";
-  import Sponsors from "$lib/components/Sponsors.svelte";
-  import About from "$lib/components/About.svelte";
-  import Schedule from "$lib/components/Schedule.svelte";
-  import Rules from "$lib/components/Rules.svelte";
-  import FAQ from "$lib/components/FAQ.svelte";
-  import Organisers from "$lib/components/Organisers.svelte";
+  import ThreeBackground from "$lib/components/ThreeBackground.svelte";
+  import SplashHero from "$lib/components/splash/SplashHero.svelte";
+  import SplashFeaturedProjects from "$lib/components/splash/SplashFeaturedProjects.svelte";
+  import SplashSponsors from "$lib/components/splash/SplashSponsors.svelte";
+  import SplashAbout from "$lib/components/splash/SplashAbout.svelte";
+  import SplashSchedule from "$lib/components/splash/SplashSchedule.svelte";
+  import SplashRules from "$lib/components/splash/SplashRules.svelte";
+  import SplashFAQ from "$lib/components/splash/SplashFAQ.svelte";
+  import SplashOrganisers from "$lib/components/splash/SplashOrganisers.svelte";
 </script>
 
 <svelte:head>
   <title>Cam Hack 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
-</section>
+<div class="splash-page">
+  <ThreeBackground />
 
-<section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Behaviour</h1>
-    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
-      <img
-        src="/unintended.png"
-        alt="Unintended"
-        class="m-0 block w-full rounded-3xl"
-      />
-    </a>
-  </div>
-</section>
+  <SplashHero />
 
-<section class="sponsors-section">
-  <Sponsors />
-</section>
+  <SplashFeaturedProjects />
 
-<!-- <section class="mb-8 px-0 md:p-4">
-  <div class="mx-auto max-w-7xl">
-    <a
-      target="_blank"
-      href="https://cam-hack-2025.devpost.com/project-gallery"
-      class="text-center text-violet-700 hover:text-violet-800"
-    >
-      <img
-        class="w-full md:rounded-3xl md:shadow-2xl md:transition-all md:hover:scale-[1.01]"
-        src="/cam-hack-theme.png"
-        alt="Turning Sci-fi into reality"
-      />
-    </a>
-  </div>
-</section> -->
+  <SplashSponsors />
 
-<section id="about">
-  <About />
-</section>
+  <SplashAbout />
 
-<section id="schedule">
-  <Schedule />
-</section>
+  <SplashSchedule />
 
-<section id="rules">
-  <Rules />
-</section>
+  <SplashRules />
 
-<section id="faq">
-  <FAQ />
-</section>
+  <SplashFAQ />
 
-<section>
-  <Organisers />
-</section>
+  <SplashOrganisers />
+</div>
 
 <style>
-  section:nth-child(odd) {
-    background-color: #fafafa;
-  }
-
-  section:nth-child(even) {
-    background-color: #ffffff;
-  }
-
-  section.unintended-section {
-    background-color: transparent !important;
-    margin: 0 !important;
-  }
-
-  section.unintended-section img {
-    margin: 0 !important;
-    display: block;
-  }
-
-  section.sponsors-section {
-    background-color: #ffffff !important;
+  .splash-page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
   }
 </style>
