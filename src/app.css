@@ -1,7 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playpen: Ubuntu Mono, monospace;
+  --font-mono: Ubuntu Mono, monospace;
+  --font-display: Space Grotesk, sans-serif;
+  --color-hack-dark: #0a0a0f;
+  --color-hack-darker: #050508;
+  --color-hack-green: #10b981;
+  --color-hack-green-light: #34d399;
+  --color-hack-green-dark: #059669;
+  --color-hack-cyan: #06b6d4;
+  --color-hack-purple: #8b5cf6;
+  --color-hack-glow: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -10,56 +23,396 @@ html {
 }
 
 body {
-  @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  font-family: var(--font-mono);
+  background-color: var(--color-hack-dark);
+  color: #e2e8f0;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-.theme-bg-gradient {
-  background-image: linear-gradient(120deg, #86e293 0%, #86e6c6 100%);
+::selection {
+  background-color: var(--color-hack-green);
+  color: var(--color-hack-dark);
 }
 
-a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+.font-display {
+  font-family: var(--font-display);
 }
 
-section {
-  @apply p-4 text-lg sm:px-8;
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-hack-green) 0%,
+    var(--color-hack-cyan) 50%,
+    var(--color-hack-green-light) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(
+    135deg,
+    var(--color-hack-purple) 0%,
+    var(--color-hack-cyan) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-green {
+  text-shadow:
+    0 0 20px var(--color-hack-green),
+    0 0 40px var(--color-hack-green),
+    0 0 60px var(--color-hack-green);
+}
+
+.glow-cyan {
+  text-shadow:
+    0 0 20px var(--color-hack-cyan),
+    0 0 40px var(--color-hack-cyan);
+}
+
+.glow-box {
+  box-shadow:
+    0 0 30px rgba(16, 185, 129, 0.3),
+    0 0 60px rgba(16, 185, 129, 0.1);
+}
+
+.glow-box-cyan {
+  box-shadow:
+    0 0 30px rgba(6, 182, 212, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.1);
+}
+
+.glass {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-glow {
+  border: 1px solid var(--color-hack-green);
+  box-shadow:
+    0 0 15px rgba(16, 185, 129, 0.5),
+    inset 0 0 15px rgba(16, 185, 129, 0.1);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(16, 185, 129, 0.4),
+      0 0 40px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(16, 185, 129, 0.6),
+      0 0 80px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+.stagger-6 {
+  animation-delay: 0.6s;
+}
+.stagger-7 {
+  animation-delay: 0.7s;
+}
+.stagger-8 {
+  animation-delay: 0.8s;
+}
+
+.hover-lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--color-hack-green) 0%,
+    var(--color-hack-green-dark) 100%
+  );
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-hack-green);
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-hack-green);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--color-hack-green);
+  color: var(--color-hack-dark);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-hack-green),
+    var(--color-hack-cyan)
+  );
+  border-radius: 2px;
+}
+
+.card {
+  background: rgba(10, 10, 15, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-hack-green);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
 }
 
 h1 {
-  @apply text-4xl font-bold;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  @apply text-3xl font-bold;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 h3 {
-  @apply text-2xl font-bold;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 h4 {
-  @apply text-xl font-bold;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-h5 {
-  @apply text-lg font-bold;
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
 }
 
-h6 {
-  @apply text-base font-bold;
+a {
+  color: var(--color-hack-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-h1,
-h2,
-h3,
-p,
+a:hover {
+  color: var(--color-hack-green-light);
+}
+
 ul {
-  @apply mb-4;
+  margin-bottom: 1rem;
 }
 
-h4,
-h5,
-h6,
 li {
-  @apply mb-2;
+  margin-bottom: 0.5rem;
 }
