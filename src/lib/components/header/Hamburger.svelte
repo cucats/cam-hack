@@ -6,8 +6,7 @@
   }
 </script>
 
-<!-- svelte-ignore a11y_consider_explicit_label -->
-<button onclick={toggle} class="group cursor-pointer md:hidden">
+<button onclick={toggle} class="group cursor-pointer md:hidden" aria-label="Toggle menu">
   <div class="bar" class:expanded-bar-1={expanded}></div>
   <div class="bar" class:expanded-bar-2={expanded}></div>
   <div class="bar" class:expanded-bar-3={expanded}></div>
@@ -16,8 +15,10 @@
 <style lang="postcss">
   @reference "../../../app.css"
 
-    .bar {
-    @apply my-1 h-1 w-7 rounded-full bg-slate-700 transition-all;
+  .bar {
+    @apply my-1 h-1 w-7 rounded-full transition-all;
+    background: #00ff88;
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
   }
 
   .expanded-bar-1 {
