@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 @import "tailwindcss";
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --font-display: "Orbitron", "Ubuntu Mono", monospace;
 }
 
 html {
@@ -11,30 +14,41 @@ html {
 
 body {
   @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  background: radial-gradient(ellipse at top, #0f172a 0%, #020617 100%);
+  background-attachment: fixed;
 }
 
 .theme-bg-gradient {
-  background-image: linear-gradient(120deg, #86e293 0%, #86e6c6 100%);
+  background-image: linear-gradient(120deg, #10b981 0%, #059669 50%, #86e6c6 100%);
+}
+
+.theme-bg-glow {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(134, 230, 198, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+  @apply text-emerald-400 hover:text-emerald-300 transition-colors;
 }
 
 section {
-  @apply p-4 text-lg sm:px-8;
+  @apply p-4 text-lg sm:px-8 relative;
 }
 
 h1 {
   @apply text-4xl font-bold;
+  font-family: "Orbitron", "Ubuntu Mono", monospace;
 }
 
 h2 {
   @apply text-3xl font-bold;
+  font-family: "Orbitron", "Ubuntu Mono", monospace;
 }
 
 h3 {
   @apply text-2xl font-bold;
+  font-family: "Orbitron", "Ubuntu Mono", monospace;
 }
 
 h4 {
@@ -62,4 +76,45 @@ h5,
 h6,
 li {
   @apply mb-2;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.8);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slideInUp 0.8s ease-out forwards;
 }
