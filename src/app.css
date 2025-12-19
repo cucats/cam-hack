@@ -2,6 +2,7 @@
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --font-display: Space Grotesk, Ubuntu Mono, monospace;
 }
 
 html {
