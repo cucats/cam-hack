@@ -2,6 +2,30 @@
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --color-primary-green: #059669;
+  --color-secondary-green: #10b981;
+  --color-accent-green: #34d399;
+  --color-light-green: #6ee7b7;
+  --color-cyan: #06b6d4;
+  --color-dark-text: #064e3b;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 html {
@@ -11,6 +35,7 @@ html {
 
 body {
   @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
 }
 
 .theme-bg-gradient {
@@ -18,27 +43,70 @@ body {
 }
 
 a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+  @apply text-emerald-600 hover:text-emerald-700 transition-colors duration-300;
 }
 
 section {
   @apply p-4 text-lg sm:px-8;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+section.animate-section:has(> div[class*="opacity-100"])::before {
+  opacity: 1;
 }
 
 h1 {
   @apply text-4xl font-bold;
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
 }
 
 h2 {
   @apply text-3xl font-bold;
+  color: #059669;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  transition: width 0.6s ease;
+}
+
+section.animate-section:has(> div[class*="opacity-100"]) h2::after {
+  width: 100%;
 }
 
 h3 {
   @apply text-2xl font-bold;
+  color: #047857;
 }
 
 h4 {
   @apply text-xl font-bold;
+  color: #065f46;
 }
 
 h5 {
@@ -62,4 +130,15 @@ h5,
 h6,
 li {
   @apply mb-2;
+}
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
