@@ -1,37 +1,48 @@
 <script>
-  import { navigating } from "$app/stores";
   import { slide } from "svelte/transition";
 
-  let { expanded = $bindable(false) } = $props();
-
-  const closeMenu = () => {
-    expanded = false;
-  };
-
-  $effect(() => {
-    if ($navigating) closeMenu();
-  });
+  let { expanded = $bindable() } = $props();
 </script>
 
-{#snippet menuLink(href, text, target = null)}
-  <a
-    onclick={closeMenu}
-    {href}
-    {target}
-    class="block bg-white px-8 py-4 text-gray-800 transition-colors active:bg-emerald-200"
-    >{text}</a
-  >
-{/snippet}
-
 <div
-  class="absolute w-full drop-shadow-2xl select-none md:hidden"
-  transition:slide
+  transition:slide={{ duration: 300 }}
+  class="bg-cyber-dark/95 border-cyber-border absolute top-[70px] right-0 left-0 border-b backdrop-blur-lg md:hidden"
 >
-  <menu>
-    {@render menuLink("/#about", "About")}
-    {@render menuLink("/#schedule", "Schedule")}
-    {@render menuLink("/#rules", "Rules")}
-    {@render menuLink("/#faq", "FAQ")}
-    {@render menuLink("/signup", "Sign up!", "_blank")}
-  </menu>
+  <nav class="flex flex-col gap-4 p-6">
+    <a
+      class="hover:text-cyber-green border-cyber-border border-b py-3 text-xl text-gray-300 transition-colors"
+      href="/#about"
+      onclick={() => (expanded = false)}
+    >
+      About
+    </a>
+    <a
+      class="hover:text-cyber-green border-cyber-border border-b py-3 text-xl text-gray-300 transition-colors"
+      href="/#schedule"
+      onclick={() => (expanded = false)}
+    >
+      Schedule
+    </a>
+    <a
+      class="hover:text-cyber-green border-cyber-border border-b py-3 text-xl text-gray-300 transition-colors"
+      href="/#rules"
+      onclick={() => (expanded = false)}
+    >
+      Rules
+    </a>
+    <a
+      class="hover:text-cyber-green border-cyber-border border-b py-3 text-xl text-gray-300 transition-colors"
+      href="/#faq"
+      onclick={() => (expanded = false)}
+    >
+      FAQ
+    </a>
+    <a
+      class="cyber-button font-display mt-4 rounded-lg px-6 py-4 text-center text-xl tracking-wider"
+      href="/signup"
+      onclick={() => (expanded = false)}
+    >
+      <span>SIGN UP</span>
+    </a>
+  </nav>
 </div>
