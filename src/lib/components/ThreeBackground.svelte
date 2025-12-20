@@ -1,6 +1,6 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import * as THREE from "three";
+  import { browser } from "$app/environment";
 
   let container;
   let animationId;
@@ -10,8 +10,13 @@
   let mouseX = 0;
   let mouseY = 0;
   let time = 0;
+  let THREE;
+  let onWindowResize;
+  let onMouseMove;
 
-  function init() {
+  onMount(async () => {
+    THREE = await import("three");
+
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(
       75,
@@ -30,9 +35,22 @@
     createGeometricShapes();
     createAmbientLights();
 
+    onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    onMouseMove = (event) => {
+      mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+      mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+    };
+
     window.addEventListener("resize", onWindowResize);
     window.addEventListener("mousemove", onMouseMove);
-  }
+
+    animate();
+  });
 
   function createParticles() {
     const particleCount = 2000;
@@ -93,13 +111,6 @@
       new THREE.DodecahedronGeometry(2, 0),
     ];
 
-    const wireframeMaterial = new THREE.MeshBasicMaterial({
-      color: 0x10b981,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.3,
-    });
-
     for (let i = 0; i < 15; i++) {
       const geometry =
         geometries[Math.floor(Math.random() * geometries.length)];
@@ -151,17 +162,6 @@
     scene.add(light3);
   }
 
-  function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  }
-
-  function onMouseMove(event) {
-    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-  }
-
   function animate() {
     animationId = requestAnimationFrame(animate);
     time += 0.01;
@@ -196,20 +196,21 @@
     renderer.render(scene, camera);
   }
 
-  onMount(() => {
-    init();
-    animate();
-  });
-
   onDestroy(() => {
-    if (animationId) {
-      cancelAnimationFrame(animationId);
+    if (browser) {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+      if (renderer) {
+        renderer.dispose();
+      }
+      if (onWindowResize) {
+        window.removeEventListener("resize", onWindowResize);
+      }
+      if (onMouseMove) {
+        window.removeEventListener("mousemove", onMouseMove);
+      }
     }
-    if (renderer) {
-      renderer.dispose();
-    }
-    window.removeEventListener("resize", onWindowResize);
-    window.removeEventListener("mousemove", onMouseMove);
   });
 </script>
 
