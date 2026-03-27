@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playpen: Ubuntu Mono, monospace;
+  --font-playpen: "Ubuntu Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 html {
@@ -11,6 +12,7 @@ html {
 
 body {
   @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  background: #ffffff;
 }
 
 .theme-bg-gradient {

@@ -1,5 +1,5 @@
 <script>
-  import Hero from "$lib/components/Hero.svelte";
+  import Splash from "$lib/components/Splash.svelte";
   import Sponsors from "$lib/components/Sponsors.svelte";
   import About from "$lib/components/About.svelte";
   import Schedule from "$lib/components/Schedule.svelte";
@@ -12,9 +12,9 @@
   <title>Cam Hack 2025</title>
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
-</section>
+<div class="splash-wrap">
+  <Splash />
+</div>
 
 <section class="unintended-section m-0">
   <div class="mx-auto max-w-7xl px-4 sm:px-8">
@@ -33,7 +33,7 @@
   <Sponsors />
 </section>
 
-<!-- <section class="mb-8 px-0 md:p-4">
+<section class="mb-8 px-0 md:p-4">
   <div class="mx-auto max-w-7xl">
     <a
       target="_blank"
@@ -47,7 +47,7 @@
       />
     </a>
   </div>
-</section> -->
+</section>
 
 <section id="about">
   <About />
@@ -70,6 +70,14 @@
 </section>
 
 <style>
+  .splash-wrap {
+    background: #030605;
+  }
+
+  .splash-wrap + section {
+    margin-top: 0;
+  }
+
   section:nth-child(odd) {
     background-color: #fafafa;
   }
