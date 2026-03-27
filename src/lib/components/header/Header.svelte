@@ -14,19 +14,19 @@
           src="/cam-hack-logo-text.png"
           alt="Cam Hack Logo"
         />
-        <span class="ml-4 text-xl font-bold">Cam Hack 2025</span>
+        <span class="ml-4 text-xl font-bold text-slate-50">Cam Hack 2025</span>
       </div>
     </a>
     <div class="px-4">
       <nav
-        class="flex items-center gap-6 text-xl font-semibold transition-colors max-md:hidden"
+        class="flex items-center gap-6 text-xl font-semibold text-slate-100 transition-colors max-md:hidden"
       >
-        <a class="hover:text-emerald-600" href="/#about">About</a>
-        <a class="hover:text-emerald-600" href="/#schedule">Schedule</a>
-        <a class="hover:text-emerald-600" href="/#rules">Rules</a>
-        <a class="hover:text-emerald-600" href="/#faq">FAQ</a>
+        <a class="hover:text-emerald-300" href="/#about">About</a>
+        <a class="hover:text-emerald-300" href="/#schedule">Schedule</a>
+        <a class="hover:text-emerald-300" href="/#rules">Rules</a>
+        <a class="hover:text-emerald-300" href="/#faq">FAQ</a>
         <a
-          class="rounded-lg bg-emerald-300 px-4 py-2 transition-transform hover:scale-105"
+          class="rounded-lg bg-emerald-300 px-4 py-2 text-slate-900 transition-transform hover:scale-105"
           href="/signup">Sign up!</a
         >
       </nav>

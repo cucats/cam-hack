@@ -18,7 +18,7 @@
     onclick={closeMenu}
     {href}
     {target}
-    class="block bg-white px-8 py-4 text-gray-800 transition-colors active:bg-emerald-200"
+    class="block bg-black/80 px-8 py-4 text-slate-100 transition-colors active:bg-emerald-300/25"
     >{text}</a
   >
 {/snippet}
