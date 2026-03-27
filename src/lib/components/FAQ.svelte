@@ -9,8 +9,8 @@
       <span> What is a hackathon?</span>
     {/snippet}
     A hackathon is an event where people collaborate to create new projects! It usually
-    runs over a weekend and is a great way to learn new skills, meet new people,
-    and have fun!
+    runs over a weekend and is a great way to learn new skills, meet new people, and
+    have fun!
   </FAQuestion>
   <FAQuestion>
     {#snippet question()}
