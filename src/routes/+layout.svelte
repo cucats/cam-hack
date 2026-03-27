@@ -1,20 +1,16 @@
 <script>
   import "../app.css";
-
-  import Footer from "$lib/components/Footer.svelte";
-  import Header from "$lib/components/header/Header.svelte";
-
   let { children } = $props();
 </script>
 
-<header class="relative bg-white shadow-md">
-  <Header />
-</header>
-
-<main class="flex-1">
+<div class="splash-layout">
   {@render children()}
-</main>
+</div>
 
-<footer class="theme-bg-gradient p-8">
-  <Footer />
-</footer>
+<style>
+  .splash-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
