@@ -6,18 +6,38 @@
   }
 </script>
 
-<!-- svelte-ignore a11y_consider_explicit_label -->
-<button onclick={toggle} class="group cursor-pointer md:hidden">
+<button onclick={toggle} class="hamburger-button" aria-label="Toggle menu">
   <div class="bar" class:expanded-bar-1={expanded}></div>
   <div class="bar" class:expanded-bar-2={expanded}></div>
   <div class="bar" class:expanded-bar-3={expanded}></div>
 </button>
 
-<style lang="postcss">
-  @reference "../../../app.css"
+<style>
+  .hamburger-button {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+  }
 
-    .bar {
-    @apply my-1 h-1 w-7 rounded-full bg-slate-700 transition-all;
+  @media (min-width: 768px) {
+    .hamburger-button {
+      display: none;
+    }
+  }
+
+  .bar {
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 2px;
+    background: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-button:hover .bar {
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
   }
 
   .expanded-bar-1 {
