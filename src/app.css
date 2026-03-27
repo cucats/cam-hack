@@ -2,6 +2,20 @@
 
 @theme {
   --font-playpen: Ubuntu Mono, monospace;
+  --color-primary-green: #10b981;
+  --color-secondary-green: #34d399;
+  --color-light-green: #6ee7b7;
+  --color-dark-green: #059669;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
 }
 
 html {
@@ -11,6 +25,7 @@ html {
 
 body {
   @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
 }
 
 .theme-bg-gradient {
@@ -18,7 +33,23 @@ body {
 }
 
 a.theme-hyperlink {
-  @apply text-emerald-600 hover:text-emerald-700;
+  @apply text-emerald-600 hover:text-emerald-700 transition-colors duration-300;
+  position: relative;
+}
+
+a.theme-hyperlink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  transition: width 0.3s ease;
+}
+
+a.theme-hyperlink:hover::after {
+  width: 100%;
 }
 
 section {
@@ -27,26 +58,38 @@ section {
 
 h1 {
   @apply text-4xl font-bold;
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2 {
   @apply text-3xl font-bold;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h3 {
   @apply text-2xl font-bold;
+  color: #047857;
 }
 
 h4 {
   @apply text-xl font-bold;
+  color: #059669;
 }
 
 h5 {
   @apply text-lg font-bold;
+  color: #047857;
 }
 
 h6 {
   @apply text-base font-bold;
+  color: #059669;
 }
 
 h1,
