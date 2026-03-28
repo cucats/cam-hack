@@ -4,17 +4,21 @@
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/header/Header.svelte";
 
-  let { children } = $props();
+  let { children, data } = $props();
 </script>
 
-<header class="relative bg-white shadow-md">
-  <Header />
-</header>
+{#if !data?.hideLayout}
+  <header class="relative bg-white shadow-md">
+    <Header />
+  </header>
+{/if}
 
 <main class="flex-1">
   {@render children()}
 </main>
 
-<footer class="theme-bg-gradient p-8">
-  <Footer />
-</footer>
+{#if !data?.hideLayout}
+  <footer class="theme-bg-gradient p-8">
+    <Footer />
+  </footer>
+{/if}
