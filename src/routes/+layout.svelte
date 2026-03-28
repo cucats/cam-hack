@@ -3,11 +3,14 @@
 
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/header/Header.svelte";
+  import { page } from "$app/stores";
 
   let { children } = $props();
+
+  let isHomePage = $derived($page.url.pathname === "/");
 </script>
 
-<header class="relative bg-white shadow-md">
+<header class="relative z-50 bg-white shadow-md">
   <Header />
 </header>
 
@@ -15,6 +18,8 @@
   {@render children()}
 </main>
 
-<footer class="theme-bg-gradient p-8">
-  <Footer />
-</footer>
+{#if !isHomePage}
+  <footer class="theme-bg-gradient p-8">
+    <Footer />
+  </footer>
+{/if}
