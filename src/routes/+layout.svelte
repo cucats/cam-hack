@@ -1,20 +1,13 @@
 <script>
   import "../app.css";
 
-  import Footer from "$lib/components/Footer.svelte";
-  import Header from "$lib/components/header/Header.svelte";
+  import HeaderNew from "$lib/components/header/HeaderNew.svelte";
 
   let { children } = $props();
 </script>
 
-<header class="relative bg-white shadow-md">
-  <Header />
-</header>
+<HeaderNew />
 
 <main class="flex-1">
   {@render children()}
 </main>
-
-<footer class="theme-bg-gradient p-8">
-  <Footer />
-</footer>
