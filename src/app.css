@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playpen: Ubuntu Mono, monospace;
+  --font-playpen: Ubuntu Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+    "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 html {
@@ -27,26 +30,32 @@ section {
 
 h1 {
   @apply text-4xl font-bold;
+  font-family: var(--font-display);
 }
 
 h2 {
   @apply text-3xl font-bold;
+  font-family: var(--font-display);
 }
 
 h3 {
   @apply text-2xl font-bold;
+  font-family: var(--font-display);
 }
 
 h4 {
   @apply text-xl font-bold;
+  font-family: var(--font-display);
 }
 
 h5 {
   @apply text-lg font-bold;
+  font-family: var(--font-display);
 }
 
 h6 {
   @apply text-base font-bold;
+  font-family: var(--font-display);
 }
 
 h1,
