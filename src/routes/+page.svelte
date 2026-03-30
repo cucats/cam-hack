@@ -1,94 +1,91 @@
 <script>
-  import Hero from "$lib/components/Hero.svelte";
-  import Sponsors from "$lib/components/Sponsors.svelte";
-  import About from "$lib/components/About.svelte";
-  import Schedule from "$lib/components/Schedule.svelte";
-  import Rules from "$lib/components/Rules.svelte";
-  import FAQ from "$lib/components/FAQ.svelte";
-  import Organisers from "$lib/components/Organisers.svelte";
+  import ThreeBackground from "$lib/components/ThreeBackground.svelte";
+  import SplashHero from "$lib/components/SplashHero.svelte";
+  import FeaturedProjects from "$lib/components/FeaturedProjects.svelte";
+  import SplashAbout from "$lib/components/SplashAbout.svelte";
+  import SplashSchedule from "$lib/components/SplashSchedule.svelte";
+  import SplashSponsors from "$lib/components/SplashSponsors.svelte";
+  import SplashFAQ from "$lib/components/SplashFAQ.svelte";
+  import SplashRules from "$lib/components/SplashRules.svelte";
+  import SplashOrganisers from "$lib/components/SplashOrganisers.svelte";
+  import SplashContact from "$lib/components/SplashContact.svelte";
 </script>
 
 <svelte:head>
   <title>Cam Hack 2025</title>
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
+<ThreeBackground />
+
+<section class="hero-section">
+  <SplashHero />
 </section>
 
-<section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Behaviour</h1>
-    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
-      <img
-        src="/unintended.png"
-        alt="Unintended"
-        class="m-0 block w-full rounded-3xl"
-      />
-    </a>
-  </div>
+<section id="projects" class="section-dark">
+  <FeaturedProjects />
 </section>
 
-<section class="sponsors-section">
-  <Sponsors />
+<section id="about" class="section-glow">
+  <SplashAbout />
 </section>
 
-<!-- <section class="mb-8 px-0 md:p-4">
-  <div class="mx-auto max-w-7xl">
-    <a
-      target="_blank"
-      href="https://cam-hack-2025.devpost.com/project-gallery"
-      class="text-center text-violet-700 hover:text-violet-800"
-    >
-      <img
-        class="w-full md:rounded-3xl md:shadow-2xl md:transition-all md:hover:scale-[1.01]"
-        src="/cam-hack-theme.png"
-        alt="Turning Sci-fi into reality"
-      />
-    </a>
-  </div>
-</section> -->
-
-<section id="about">
-  <About />
+<section id="schedule" class="section-dark">
+  <SplashSchedule />
 </section>
 
-<section id="schedule">
-  <Schedule />
+<section id="sponsors" class="section-glow">
+  <SplashSponsors />
 </section>
 
-<section id="rules">
-  <Rules />
+<section id="faq" class="section-dark">
+  <SplashFAQ />
 </section>
 
-<section id="faq">
-  <FAQ />
+<section id="rules" class="section-glow">
+  <SplashRules />
 </section>
 
-<section>
-  <Organisers />
+<section class="section-dark">
+  <SplashOrganisers />
+</section>
+
+<section class="section-final">
+  <SplashContact />
 </section>
 
 <style>
-  section:nth-child(odd) {
-    background-color: #fafafa;
+  section {
+    position: relative;
+    z-index: 10;
   }
 
-  section:nth-child(even) {
-    background-color: #ffffff;
+  .hero-section {
+    background: transparent;
+    padding: 0;
   }
 
-  section.unintended-section {
-    background-color: transparent !important;
-    margin: 0 !important;
+  .section-dark {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(0, 255, 136, 0.1);
   }
 
-  section.unintended-section img {
-    margin: 0 !important;
-    display: block;
+  .section-glow {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.95) 0%,
+      rgba(0, 255, 136, 0.02) 50%,
+      rgba(10, 10, 10, 0.95) 100%
+    );
+    border-top: 1px solid rgba(0, 255, 136, 0.1);
   }
 
-  section.sponsors-section {
-    background-color: #ffffff !important;
+  .section-final {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.95) 0%,
+      rgba(0, 255, 136, 0.05) 100%
+    );
+    border-top: 1px solid rgba(0, 255, 136, 0.1);
+    border-bottom: 2px solid rgba(0, 255, 136, 0.3);
   }
 </style>
