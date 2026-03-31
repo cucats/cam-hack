@@ -18,13 +18,13 @@
     onclick={closeMenu}
     {href}
     {target}
-    class="block bg-white px-8 py-4 text-gray-800 transition-colors active:bg-emerald-200"
+    class="block bg-black/90 backdrop-blur-md px-8 py-4 text-white transition-colors active:bg-emerald-600/30"
     >{text}</a
   >
 {/snippet}
 
 <div
-  class="absolute w-full drop-shadow-2xl select-none md:hidden"
+  class="absolute w-full drop-shadow-2xl select-none md:hidden z-50"
   transition:slide
 >
   <menu>
