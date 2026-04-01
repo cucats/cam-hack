@@ -3,6 +3,7 @@
 
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/header/Header.svelte";
+  import { page } from "$app/stores";
 
   let { children } = $props();
 </script>
@@ -15,6 +16,8 @@
   {@render children()}
 </main>
 
-<footer class="theme-bg-gradient p-8">
-  <Footer />
-</footer>
+{#if $page.url.pathname !== "/"}
+  <footer class="theme-bg-gradient p-8">
+    <Footer />
+  </footer>
+{/if}
