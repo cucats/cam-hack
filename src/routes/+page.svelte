@@ -1,5 +1,6 @@
 <script>
   import Hero from "$lib/components/Hero.svelte";
+  import FeaturedProjects from "$lib/components/FeaturedProjects.svelte";
   import Sponsors from "$lib/components/Sponsors.svelte";
   import About from "$lib/components/About.svelte";
   import Schedule from "$lib/components/Schedule.svelte";
@@ -10,85 +11,129 @@
 
 <svelte:head>
   <title>Cam Hack 2025</title>
+  <meta
+    name="description"
+    content="Cam Hack 2025 - A 2 day hackathon for the innovative minds at the University of Cambridge."
+  />
 </svelte:head>
 
-<section class="sm:p-8">
-  <Hero />
-</section>
+<Hero />
 
-<section class="unintended-section m-0">
-  <div class="mx-auto max-w-7xl px-4 sm:px-8">
-    <h1 class="py-8 text-center">Unintended Behaviour</h1>
-    <a target="_blank" href="https://cam-hack-2025.devpost.com" class="block">
-      <img
-        src="/unintended.png"
-        alt="Unintended"
-        class="m-0 block w-full rounded-3xl"
-      />
-    </a>
+<section id="featured" class="relative overflow-hidden">
+  <div
+    class="from-cyber-dark via-cyber-surface/50 to-cyber-dark absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <FeaturedProjects />
   </div>
 </section>
 
-<section class="sponsors-section">
-  <Sponsors />
-</section>
-
-<!-- <section class="mb-8 px-0 md:p-4">
-  <div class="mx-auto max-w-7xl">
-    <a
-      target="_blank"
-      href="https://cam-hack-2025.devpost.com/project-gallery"
-      class="text-center text-violet-700 hover:text-violet-800"
-    >
-      <img
-        class="w-full md:rounded-3xl md:shadow-2xl md:transition-all md:hover:scale-[1.01]"
-        src="/cam-hack-theme.png"
-        alt="Turning Sci-fi into reality"
-      />
-    </a>
+<section id="sponsors" class="relative">
+  <div
+    class="from-cyber-dark to-cyber-surface/30 absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <Sponsors />
   </div>
-</section> -->
-
-<section id="about">
-  <About />
 </section>
 
-<section id="schedule">
-  <Schedule />
+<section id="about" class="relative overflow-hidden">
+  <div
+    class="from-cyber-surface/30 via-cyber-dark to-cyber-surface/30 absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <About />
+  </div>
 </section>
 
-<section id="rules">
-  <Rules />
+<section id="schedule" class="relative">
+  <div
+    class="from-cyber-surface/30 to-cyber-dark absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <Schedule />
+  </div>
 </section>
 
-<section id="faq">
-  <FAQ />
+<section id="rules" class="relative overflow-hidden">
+  <div
+    class="from-cyber-dark via-cyber-surface/50 to-cyber-dark absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <Rules />
+  </div>
 </section>
 
-<section>
-  <Organisers />
+<section id="faq" class="relative">
+  <div
+    class="from-cyber-dark to-cyber-surface/30 absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <FAQ />
+  </div>
 </section>
 
-<style>
-  section:nth-child(odd) {
-    background-color: #fafafa;
-  }
+<section id="organisers" class="relative overflow-hidden">
+  <div
+    class="from-cyber-surface/30 to-cyber-dark absolute inset-0 bg-gradient-to-b"
+  ></div>
+  <div class="relative z-10">
+    <Organisers />
+  </div>
+</section>
 
-  section:nth-child(even) {
-    background-color: #ffffff;
-  }
+<footer class="relative px-4 py-16">
+  <div
+    class="from-cyber-surface/50 to-cyber-dark absolute inset-0 bg-gradient-to-t"
+  ></div>
+  <div class="relative z-10 mx-auto max-w-6xl text-center">
+    <div class="mb-8">
+      <img
+        src="/cam-hack-logo-text.png"
+        alt="Cam Hack Logo"
+        class="mx-auto mb-4 h-20 w-20 opacity-50"
+      />
+    </div>
 
-  section.unintended-section {
-    background-color: transparent !important;
-    margin: 0 !important;
-  }
+    <div class="mb-8 flex flex-wrap justify-center gap-6">
+      <a
+        href="mailto:camhack@cucats.org"
+        class="hover:text-cyber-green font-mono text-gray-400 transition-colors"
+      >
+        Contact
+      </a>
+      <span class="text-gray-600">•</span>
+      <a
+        href="/code-of-conduct"
+        class="hover:text-cyber-green font-mono text-gray-400 transition-colors"
+      >
+        Code of Conduct
+      </a>
+      <span class="text-gray-600">•</span>
+      <a
+        href="/discord"
+        target="_blank"
+        class="hover:text-cyber-green font-mono text-gray-400 transition-colors"
+      >
+        Discord
+      </a>
+    </div>
 
-  section.unintended-section img {
-    margin: 0 !important;
-    display: block;
-  }
+    <div class="border-cyber-border border-t pt-8">
+      <p class="mb-2 text-sm text-gray-500">Copyright © Cam Hack 2025</p>
+      <p class="text-xs text-gray-600">Art by Gwen Sellers</p>
+    </div>
 
-  section.sponsors-section {
-    background-color: #ffffff !important;
-  }
-</style>
+    <div class="mt-8 flex justify-center gap-4">
+      <div class="bg-cyber-green h-2 w-2 animate-pulse rounded-full"></div>
+      <div
+        class="bg-cyber-cyan h-2 w-2 animate-pulse rounded-full"
+        style="animation-delay: 0.2s"
+      ></div>
+      <div
+        class="bg-cyber-green h-2 w-2 animate-pulse rounded-full"
+        style="animation-delay: 0.4s"
+      ></div>
+    </div>
+  </div>
+</footer>
