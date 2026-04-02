@@ -11,6 +11,13 @@ html {
 
 body {
   @apply font-playpen flex min-h-screen flex-col text-slate-800;
+  margin: 0;
+  padding: 0;
+}
+
+body:has(.splash-page) {
+  background: #0a0e27;
+  color: #ffffff;
 }
 
 .theme-bg-gradient {
