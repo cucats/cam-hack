@@ -18,7 +18,8 @@
     onclick={closeMenu}
     {href}
     {target}
-    class="block bg-white px-8 py-4 text-gray-800 transition-colors active:bg-emerald-200"
+    class="block bg-black/95 px-8 py-4 text-emerald-300 transition-colors hover:bg-emerald-900/30 active:bg-emerald-800/40"
+    style="border-bottom: 1px solid rgba(16, 185, 129, 0.2);"
     >{text}</a
   >
 {/snippet}
@@ -30,7 +31,6 @@
   <menu>
     {@render menuLink("/#about", "About")}
     {@render menuLink("/#schedule", "Schedule")}
-    {@render menuLink("/#rules", "Rules")}
     {@render menuLink("/#faq", "FAQ")}
     {@render menuLink("/signup", "Sign up!", "_blank")}
   </menu>
